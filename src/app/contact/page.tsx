@@ -18,9 +18,9 @@ export default function ContactPage() {
                 height="h-[40vh]"
             />
 
-            <section className="py-20 bg-gray-50">
+            <section className="py-12 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-12">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
                         {/* Contact Info */}
                         <div className="lg:w-1/3 space-y-8">
                             <div>

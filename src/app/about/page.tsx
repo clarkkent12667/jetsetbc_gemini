@@ -17,9 +17,9 @@ export default function AboutPage() {
             />
 
             {/* Company Story */}
-            <section className="py-20 bg-white">
+            <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
                         <div className="lg:w-1/2">
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-6">
                                 How did Jetset Business Center get started?
@@ -57,9 +57,9 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-12 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10 md:mb-16">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4">
                             Our Values
                         </h2>

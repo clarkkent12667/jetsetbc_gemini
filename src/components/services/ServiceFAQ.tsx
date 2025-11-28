@@ -17,9 +17,9 @@ export function ServiceFAQ({ items }: ServiceFAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                <h2 className="text-3xl font-heading font-bold text-primary-700 mb-10 text-center">
+                <h2 className="text-3xl font-heading font-bold text-primary-700 mb-8 md:mb-10 text-center">
                     Frequently Asked Questions
                 </h2>
 

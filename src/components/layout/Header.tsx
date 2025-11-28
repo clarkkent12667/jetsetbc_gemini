@@ -152,7 +152,7 @@ export function Header() {
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     {mobileMenuOpen ? (
-                        <X className={cn("w-6 h-6", isScrolled ? "text-gray-900" : "text-white")} />
+                        <X className="w-6 h-6 text-gray-900" />
                     ) : (
                         <Menu className={cn("w-6 h-6", isScrolled ? "text-gray-900" : "text-white")} />
                     )}

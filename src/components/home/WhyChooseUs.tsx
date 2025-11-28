@@ -38,9 +38,9 @@ const benefits = [
 
 export function WhyChooseUs() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
                     <div className="lg:w-1/2">
                         <motion.h2
                             initial={{ opacity: 0, x: -30 }}

@@ -35,9 +35,9 @@ export function TestimonialCarousel() {
     }, [emblaApi]);
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 md:mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4">
                         What Our Clients Say
                     </h2>
@@ -109,14 +109,14 @@ export function TestimonialCarousel() {
 
                     <button
                         onClick={scrollPrev}
-                        className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
+                        className="hidden md:flex absolute top-1/2 -left-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
 
                     <button
                         onClick={scrollNext}
-                        className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
+                        className="hidden md:flex absolute top-1/2 -right-12 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-primary-600 hover:bg-primary-50 transition-colors"
                     >
                         <ChevronRight className="w-6 h-6" />
                     </button>
