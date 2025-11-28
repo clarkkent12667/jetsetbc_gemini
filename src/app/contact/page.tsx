@@ -18,9 +18,9 @@ export default function ContactPage() {
                 height="h-[40vh]"
             />
 
-            <section className="py-12 md:py-20 bg-gray-50">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+            <section className="py-12 md:py-20 bg-gray-50 w-full overflow-x-hidden">
+                <div className="container mx-auto px-4 md:px-6 max-w-full w-full">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 w-full">
                         {/* Contact Info */}
                         <div className="lg:w-1/3 space-y-8">
                             <div>
@@ -36,8 +36,8 @@ export default function ContactPage() {
                                         <MapPin className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">Our Locations</h4>
-                                        <p className="text-gray-600">Prime Tower & Regal Tower,<br />Business Bay, Dubai, UAE</p>
+                                        <h4 className="font-bold text-gray-900 mb-1">Locate Us</h4>
+                                        <p className="text-gray-600">Prime Tower, 20th Floor,<br />Business Bay, Dubai, UAE</p>
                                     </div>
                                 </div>
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Phone</h4>
-                                        <p className="text-gray-600">+971 00 000 0000</p>
+                                        <a href="tel:+971585779312" className="text-gray-600 hover:text-primary-600 transition-colors">+971 585 779 312</a>
                                     </div>
                                 </div>
 
@@ -57,7 +57,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                                        <p className="text-gray-600">info@jetsetbc.com</p>
+                                        <a href="mailto:contact@jetsetbc.com" className="text-gray-600 hover:text-primary-600 transition-colors">contact@jetsetbc.com</a>
                                     </div>
                                 </div>
 
@@ -84,8 +84,18 @@ export default function ContactPage() {
             </section>
 
             {/* Map Section */}
-            <section className="h-[400px] relative">
-                <MapComponent />
+            <section className="h-[400px] md:h-[500px] relative w-full overflow-hidden mb-0 pb-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.2592949248583!2d55.2666454784102!3d25.188412174622673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f697de05c6e1f%3A0x9f530a5a77a5f1d2!2sJetset%20Business%20Center%20-%20Prime%20Tower!5e1!3m2!1sen!2sus!4v1764343207847!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, margin: 0, padding: 0, display: 'block' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Jetset Business Center - Prime Tower"
+                    className="w-full h-full m-0 p-0 block"
+                />
             </section>
         </>
     );

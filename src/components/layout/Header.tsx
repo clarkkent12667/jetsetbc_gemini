@@ -57,29 +57,29 @@ export function Header() {
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
                 isScrolled
                     ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-                    : "bg-transparent py-6"
+                    : "bg-transparent py-4 sm:py-6"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between max-w-full w-full">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 z-50">
-                    <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-xl shadow-sm transition-all hover:bg-white">
+                <Link href="/" className="flex items-center gap-2 z-50 shrink-0">
+                    <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-3 py-1.5 rounded-xl shadow-sm transition-all hover:bg-white">
                         <Image
                             src="/logo.png"
                             alt="Jetset Business Center"
                             width={140}
                             height={40}
-                            className="object-contain"
+                            className="object-contain w-auto h-8 sm:h-10"
                             priority
                         />
                     </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-8">
+                <nav className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
                     {navigation.map((item) => (
                         <div
                             key={item.name}
@@ -148,8 +148,9 @@ export function Header() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="lg:hidden z-50 p-2"
+                    className="lg:hidden z-50 p-2 shrink-0 ml-2"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle menu"
                 >
                     {mobileMenuOpen ? (
                         <X className="w-6 h-6 text-gray-900" />
@@ -166,7 +167,7 @@ export function Header() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: "100%" }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed inset-0 bg-white z-40 pt-24 px-6 lg:hidden overflow-y-auto"
+                            className="fixed inset-0 bg-white z-40 pt-24 px-6 lg:hidden overflow-y-auto overflow-x-hidden"
                         >
                             <nav className="flex flex-col gap-6">
                                 {navigation.map((item) => (

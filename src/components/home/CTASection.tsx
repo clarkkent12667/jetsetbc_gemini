@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
     return (
-        <section className="py-12 md:py-20 bg-primary-700 relative overflow-hidden">
+        <section className="py-12 md:py-20 bg-primary-700 relative overflow-hidden w-full">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white blur-3xl" />

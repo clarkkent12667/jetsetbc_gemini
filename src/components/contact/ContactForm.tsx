@@ -47,7 +47,7 @@ export function ContactForm() {
     };
 
     return (
-        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 w-full">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
 
             {submitStatus === 'success' ? (

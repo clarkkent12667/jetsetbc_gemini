@@ -4,8 +4,8 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react
 
 export function Footer() {
     return (
-        <footer className="bg-primary-700 text-white pt-12 pb-8 md:pt-16">
-            <div className="container mx-auto px-4 md:px-6">
+        <footer className="bg-primary-700 text-white pt-12 pb-8 md:pt-16 w-full overflow-x-hidden">
+            <div className="container mx-auto px-4 md:px-6 max-w-full w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Company Info */}
                     <div>
@@ -108,20 +108,20 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-secondary-500 shrink-0 mt-1" />
                                 <span className="text-primary-100">
-                                    Prime Tower & Regal Tower,<br />
+                                    Prime Tower, 20th Floor,<br />
                                     Business Bay, Dubai, UAE
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-secondary-500 shrink-0" />
-                                <a href="tel:+97100000000" className="text-primary-100 hover:text-white transition-colors">
-                                    +971 00 000 0000
+                                <a href="tel:+971585779312" className="text-primary-100 hover:text-white transition-colors">
+                                    +971 585 779 312
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-secondary-500 shrink-0" />
-                                <a href="mailto:info@jetsetbc.com" className="text-primary-100 hover:text-white transition-colors">
-                                    info@jetsetbc.com
+                                <a href="mailto:contact@jetsetbc.com" className="text-primary-100 hover:text-white transition-colors">
+                                    contact@jetsetbc.com
                                 </a>
                             </li>
                         </ul>

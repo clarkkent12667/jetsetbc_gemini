@@ -26,12 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen`}
+        className={`${inter.variable} ${poppins.variable} antialiased font-sans flex flex-col min-h-screen overflow-x-hidden`}
       >
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow w-full overflow-x-hidden">
           {children}
         </main>
         <Footer />

@@ -9,7 +9,7 @@ export function HeroSection() {
     const y = useTransform(scrollY, [0, 500], [0, 150]);
 
     return (
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
             {/* Background Image with Parallax */}
             <motion.div
                 style={{ y }}
@@ -25,14 +25,14 @@ export function HeroSection() {
             </motion.div>
 
             {/* Content */}
-            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center text-white">
+            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center text-white max-w-full">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-                        Elevate Your Business in <br />
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight px-2">
+                        Elevate Your Business in <br className="hidden sm:block" />
                         <span className="text-secondary-500">Dubai's Prime Locations</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">

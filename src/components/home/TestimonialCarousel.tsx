@@ -46,8 +46,8 @@ export function TestimonialCarousel() {
                     </p>
                 </div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <div className="overflow-hidden" ref={emblaRef}>
+                <div className="relative max-w-4xl mx-auto w-full">
+                    <div className="overflow-hidden w-full" ref={emblaRef}>
                         <div className="flex">
                             {testimonials.map((testimonial, index) => (
                                 <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
