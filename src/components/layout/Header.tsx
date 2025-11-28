@@ -85,12 +85,7 @@ export function Header() {
 
     return (
         <header
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
-                isScrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-                    : "bg-transparent py-4 sm:py-6"
-            )}
+            className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full py-4 sm:py-6"
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between max-w-full w-full">
                 {/* Logo */}
@@ -109,8 +104,13 @@ export function Header() {
                     </Link>
                 )}
 
-                {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+                {/* Desktop Navigation - Glass Morphism Pill */}
+                <nav className={cn(
+                    "hidden lg:flex items-center gap-1 px-6 py-3 backdrop-blur-xl rounded-full transition-all duration-300",
+                    isScrolled
+                        ? "bg-white border-2 border-gray-200 shadow-2xl ring-1 ring-gray-100"
+                        : "bg-white border border-gray-200 shadow-lg"
+                )}>
                     {navigation.map((item) => (
                         <div
                             key={item.name}
@@ -121,16 +121,14 @@ export function Header() {
                             <Link
                                 href={item.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors flex items-center gap-1",
-                                    isScrolled
-                                        ? "text-gray-700 hover:text-primary-600"
-                                        : "text-white/90 hover:text-white",
-                                    pathname === item.href && "text-secondary-500"
+                                    "text-sm font-medium transition-colors flex items-center gap-1 px-4 py-2 rounded-full",
+                                    "text-gray-700 hover:text-primary-600 hover:bg-gray-100/50",
+                                    pathname === item.href && "text-primary-600 bg-primary-50"
                                 )}
                             >
                                 {item.name}
                                 {item.children && (
-                                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                                    <ChevronDown className="w-4 h-4 text-gray-700 transition-transform group-hover:rotate-180" />
                                 )}
                             </Link>
 
@@ -143,13 +141,13 @@ export function Header() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 10 }}
                                             transition={{ duration: 0.2 }}
-                                            className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-2"
+                                            className="absolute top-full left-0 mt-2 w-56 bg-white backdrop-blur-xl rounded-xl shadow-xl border border-gray-200 overflow-hidden py-2"
                                         >
                                             {item.children.map((child) => (
                                                 <Link
                                                     key={child.name}
                                                     href={child.href}
-                                                    className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-primary-600 transition-colors"
+                                                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors"
                                                 >
                                                     {child.name}
                                                 </Link>
