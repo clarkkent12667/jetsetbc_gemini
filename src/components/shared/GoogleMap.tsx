@@ -15,11 +15,10 @@ const defaultCenter = {
 // Locations
 const locations = {
     "prime-tower": { lat: 25.1865, lng: 55.2645 }, // Approx
-    "regal-tower": { lat: 25.1845, lng: 55.2635 }, // Approx
 };
 
 interface MapComponentProps {
-    location?: "prime-tower" | "regal-tower";
+    location?: "prime-tower";
 }
 
 export function MapComponent({ location }: MapComponentProps) {
@@ -48,10 +47,7 @@ export function MapComponent({ location }: MapComponentProps) {
                 {location ? (
                     <Marker position={locations[location]} />
                 ) : (
-                    <>
-                        <Marker position={locations["prime-tower"]} title="Prime Tower" />
-                        <Marker position={locations["regal-tower"]} title="Regal Tower" />
-                    </>
+                    <Marker position={locations["prime-tower"]} title="Prime Tower" />
                 )}
             </GoogleMap>
         </LoadScript>

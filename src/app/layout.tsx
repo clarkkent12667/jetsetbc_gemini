@@ -16,8 +16,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Jetset Business Center | Premium Coworking & Office Spaces in Dubai",
-  description: "Premium coworking spaces, serviced offices, and business setup services in Business Bay, Dubai. Located in Prime Tower & Regal Tower.",
+  title: "JetSet Business Center | Premium Coworking & Office Spaces in Dubai",
+  description: "Premium coworking spaces, serviced offices, and business setup services in Business Bay, Dubai. Located in Prime Tower.",
 };
 
 export default function RootLayout({

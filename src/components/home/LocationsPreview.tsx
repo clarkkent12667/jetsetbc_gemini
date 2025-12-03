@@ -11,33 +11,27 @@ const locations = [
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
         href: "/prime-tower",
     },
-    {
-        name: "Regal Tower",
-        description: "A prestigious address offering premium office spaces and world-class amenities.",
-        image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=2069&auto=format&fit=crop",
-        href: "/regal-tower",
-    },
 ];
 
 export function LocationsPreview() {
     return (
-        <section className="py-12 md:py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-10 md:mb-16">
+                <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4"
                     >
-                        Our Prime Locations
+                        Our Prime Location
                     </motion.h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Strategically located in Business Bay, Dubai's central business district.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="max-w-4xl mx-auto">
                     {locations.map((location, index) => (
                         <motion.div
                             key={location.name}
@@ -45,7 +39,7 @@ export function LocationsPreview() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="group relative h-[400px] rounded-2xl overflow-hidden shadow-lg"
+                            className="group relative h-[500px] rounded-2xl overflow-hidden shadow-lg"
                         >
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"

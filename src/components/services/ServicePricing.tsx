@@ -20,9 +20,9 @@ interface ServicePricingProps {
 
 export function ServicePricing({ title = "Transparent Pricing", plans }: ServicePricingProps) {
     return (
-        <section className="py-12 md:py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-10 md:mb-16">
+                <div className="text-center mb-16">
                     <h2 className="text-3xl font-heading font-bold text-primary-700 mb-4">{title}</h2>
                     <p className="text-gray-600">Choose the plan that suits your business needs.</p>
                 </div>

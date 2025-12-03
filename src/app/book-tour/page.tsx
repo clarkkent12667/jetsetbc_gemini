@@ -22,7 +22,7 @@ export default function BookTourPage() {
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-heading font-bold text-primary-700 mb-4">Visit Us Today</h2>
                             <p className="text-gray-600">
-                                We'd love to show you around. Fill out the form below to schedule a tour of our Prime Tower or Regal Tower locations.
+                                We'd love to show you around. Fill out the form below to schedule a tour of our Prime Tower location.
                             </p>
                         </div>
 

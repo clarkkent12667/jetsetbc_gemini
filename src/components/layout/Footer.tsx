@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
@@ -10,15 +9,9 @@ export function Footer() {
                     {/* Company Info */}
                     <div>
                         <Link href="/" className="inline-block mb-6">
-                            <div className="bg-white px-3 py-2 rounded-xl inline-block">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Jetset Business Center"
-                                    width={160}
-                                    height={45}
-                                    className="object-contain"
-                                />
-                            </div>
+                            <span className="text-2xl font-heading font-bold tracking-tight text-white">
+                                JetSet<span className="text-secondary-500">BC</span>
+                            </span>
                         </Link>
                         <p className="text-primary-100 mb-6 leading-relaxed">
                             Premium coworking and office spaces in the heart of Dubai's Business Bay.
@@ -130,7 +123,7 @@ export function Footer() {
 
                 <div className="border-t border-primary-600 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-primary-200 text-sm">
-                        © {new Date().getFullYear()} Jetset Business Center. All rights reserved.
+                        © {new Date().getFullYear()} JetSet Business Center. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm">
                         <Link href="/privacy" className="text-primary-200 hover:text-white transition-colors">

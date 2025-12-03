@@ -1,7 +1,7 @@
 import { LocationTemplate } from "@/components/locations/LocationTemplate";
 
 export const metadata = {
-    title: "Prime Tower Office Space | Jetset Business Center",
+    title: "Prime Tower Office Space | JetSet Business Center",
     description: "Premium office spaces in Prime Tower, Business Bay. Stunning views of Burj Khalifa and modern amenities.",
 };
 

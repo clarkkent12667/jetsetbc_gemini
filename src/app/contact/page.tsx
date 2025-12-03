@@ -4,8 +4,8 @@ import { MapComponent } from "@/components/shared/GoogleMap";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata = {
-    title: "Contact Us | Jetset Business Center",
-    description: "Get in touch with Jetset Business Center for office bookings and inquiries.",
+    title: "Contact Us | JetSet Business Center",
+    description: "Get in touch with JetSet Business Center for office bookings and inquiries.",
 };
 
 export default function ContactPage() {

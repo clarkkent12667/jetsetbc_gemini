@@ -53,7 +53,7 @@ export default function VirtualEjariPage() {
                 title="Professional Business Presence"
                 subtitle="Meet all legal requirements for your business license."
                 features={[
-                    { title: "Prestigious Address", description: "Use our Prime Tower or Regal Tower address for your business.", icon: <MapPin className="w-6 h-6" /> },
+                    { title: "Prestigious Address", description: "Use our Prime Tower address for your business.", icon: <MapPin className="w-6 h-6" /> },
                     { title: "Ejari Contract", description: "Official tenancy contract required for DED licensing.", icon: <FileText className="w-6 h-6" /> },
                     { title: "Call Handling", description: "Dedicated local number with professional call answering.", icon: <Phone className="w-6 h-6" /> },
                     { title: "Mail Management", description: "Receipt and forwarding of your business mail.", icon: <Mail className="w-6 h-6" /> },

@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -16,7 +16,6 @@ const navigation = [
         href: "#",
         children: [
             { name: "Prime Tower", href: "/prime-tower" },
-            { name: "Regal Tower", href: "/regal-tower" },
         ],
     },
     {
@@ -31,7 +30,6 @@ const navigation = [
         ],
     },
     { name: "Pricing", href: "/pricing" },
-    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -182,7 +180,7 @@ export function Header() {
                     aria-label="Toggle menu"
                 >
                     {mobileMenuOpen ? (
-                        <X className="w-6 h-6 text-gray-900" />
+                        <X className={cn("w-6 h-6", isScrolled ? "text-gray-900" : "text-white")} />
                     ) : (
                         <Menu className={cn("w-6 h-6", isScrolled ? "text-gray-900" : "text-white")} />
                     )}

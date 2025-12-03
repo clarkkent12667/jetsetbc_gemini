@@ -34,9 +34,9 @@ export function LocationTemplate({ name, description, heroImage, address, highli
             />
 
             {/* Overview */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+                    <div className="flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-2/3">
                             <h2 className="text-3xl font-heading font-bold text-primary-700 mb-6">Overview</h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -74,16 +74,16 @@ export function LocationTemplate({ name, description, heroImage, address, highli
             </section>
 
             {/* Gallery */}
-            <section className="py-12 md:py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4 md:px-6">
-                    <h2 className="text-3xl font-heading font-bold text-primary-700 mb-8 md:mb-10 text-center">Gallery</h2>
+                    <h2 className="text-3xl font-heading font-bold text-primary-700 mb-10 text-center">Gallery</h2>
                     <ImageGallery images={images} />
                 </div>
             </section>
 
             {/* Map */}
             <section className="h-[400px] relative">
-                <MapComponent location={name.includes("Prime") ? "prime-tower" : "regal-tower"} />
+                <MapComponent location="prime-tower" />
             </section>
 
             <CTASection />

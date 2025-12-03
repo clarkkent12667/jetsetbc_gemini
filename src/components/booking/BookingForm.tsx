@@ -12,7 +12,7 @@ const bookingSchema = z.object({
     email: z.string().email('Invalid email address'),
     phone: z.string().regex(/^\+?[0-9\s-]{8,}$/, 'Invalid phone number'),
     company: z.string().optional(),
-    location: z.enum(['prime-tower', 'regal-tower']),
+    location: z.enum(['prime-tower']),
     date: z.string().min(1, 'Please select a date'),
     time: z.string().min(1, 'Please select a time'),
     message: z.string().optional(),
@@ -116,7 +116,6 @@ export function BookingForm() {
                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary-500 focus:border-transparent outline-none transition-all bg-white"
                         >
                             <option value="prime-tower">Prime Tower, Business Bay</option>
-                            <option value="regal-tower">Regal Tower, Business Bay</option>
                         </select>
                         {errors.location && <p className="text-red-500 text-sm mt-1">{errors.location.message}</p>}
                     </div>
