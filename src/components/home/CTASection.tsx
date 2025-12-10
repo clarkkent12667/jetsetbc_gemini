@@ -3,14 +3,14 @@ import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
     return (
-        <section className="py-12 md:py-20 bg-primary-700 relative overflow-hidden w-full">
+        <section className="py-16 md:py-20 lg:py-24 bg-primary-700 relative overflow-hidden w-full">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white blur-3xl" />
                 <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-secondary-500 blur-3xl" />
             </div>
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
                     Ready to Find Your Perfect Workspace?
                 </h2>

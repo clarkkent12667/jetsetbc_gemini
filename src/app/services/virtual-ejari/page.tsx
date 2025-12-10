@@ -20,9 +20,10 @@ export default function VirtualEjariPage() {
             />
 
             {/* Intro Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-                    <h2 className="text-3xl font-bold text-primary-700 mb-6">Hassle-Free Solutions</h2>
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold text-primary-700 mb-6">Hassle-Free Solutions</h2>
                     <p className="text-lg text-gray-600 mb-8">
                         Ejari is a system implemented by the Real Estate Regulatory Agency (RERA) to regulate and facilitate the rental market. 
                         The term “Ejari” means ‘my rent’ in Arabic. With Jetset’s virtual office Ejari in Dubai services, we ensure 
@@ -46,10 +47,12 @@ export default function VirtualEjariPage() {
                             <p className="text-gray-600">Even with a Virtual Ejari, you can enjoy access to our meeting rooms, business lounges, and other premium amenities on a pay-as-you-go basis.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </section>
 
             <ServiceFeatures
+                className="bg-gray-50"
                 title="Professional Business Presence"
                 subtitle="Meet all legal requirements for your business license."
                 features={[
@@ -63,6 +66,7 @@ export default function VirtualEjariPage() {
             />
 
             <ServicePricing
+                className="bg-white"
                 title="Virtual Ejari"
                 plans={[
                     {
@@ -77,6 +81,7 @@ export default function VirtualEjariPage() {
             />
 
             <ServiceFAQ
+                className="bg-gray-50"
                 items={[
                     { 
                         question: "What is Ejari and why do I need it for my business in Dubai?", 

@@ -9,7 +9,7 @@ export function HeroSection() {
     const y = useTransform(scrollY, [0, 500], [0, 150]);
 
     return (
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
+        <section className="relative h-screen min-h-[600px] py-20 md:py-24 lg:py-32 flex items-center justify-center overflow-hidden w-full">
             {/* Background Image with Parallax */}
             <motion.div
                 style={{ y }}
@@ -25,7 +25,7 @@ export function HeroSection() {
             </motion.div>
 
             {/* Content */}
-            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center text-white max-w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

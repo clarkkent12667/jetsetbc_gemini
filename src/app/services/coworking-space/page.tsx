@@ -20,9 +20,10 @@ export default function CoworkingPage() {
             />
 
             {/* Intro Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-                    <h2 className="text-3xl font-bold text-primary-700 mb-6">Innovation and Collaboration</h2>
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold text-primary-700 mb-6">Innovation and Collaboration</h2>
                     <p className="text-lg text-gray-600 mb-8">
                         Jetset Business Center brings you flexible desks in a high-end collaborative environment designed to facilitate innovation and collaboration. 
                         Perfectly positioned in the heart of Business Bay, Dubai, our co-working environment is more than just a workplace.
@@ -39,10 +40,12 @@ export default function CoworkingPage() {
                         What sets Jetset apart is our thriving community. Our members come from diverse sectors, bringing varied experiences and cultures into our workspace in Dubai. 
                         Here, you can network, collaborate on projects, and grow your business in an inspiring environment.
                     </p>
+                    </div>
                 </div>
             </section>
 
             <ServiceFeatures
+                className="bg-gray-50"
                 title="Everything You Need to Work"
                 subtitle="Focus on your work while we take care of the rest."
                 features={[
@@ -56,6 +59,7 @@ export default function CoworkingPage() {
             />
 
             <ServicePricing
+                className="bg-white"
                 plans={[
                     {
                         name: "Daily Rate",
@@ -83,6 +87,7 @@ export default function CoworkingPage() {
             />
 
             <ServiceFAQ
+                className="bg-gray-50"
                 items={[
                     { 
                         question: "How much does it cost to rent a coworking space in Dubai Business Bay?", 

@@ -11,19 +11,21 @@ interface FAQItem {
 
 interface ServiceFAQProps {
     items: FAQItem[];
+    className?: string;
 }
 
-export function ServiceFAQ({ items }: ServiceFAQProps) {
+export function ServiceFAQ({ items, className }: ServiceFAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-12 md:py-20 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                <h2 className="text-3xl font-heading font-bold text-primary-700 mb-8 md:mb-10 text-center">
-                    Frequently Asked Questions
-                </h2>
+        <section className={`py-16 md:py-20 lg:py-24 ${className || "bg-white"}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-heading font-bold text-primary-700 mb-8 md:mb-10 text-center">
+                        Frequently Asked Questions
+                    </h2>
 
-                <div className="space-y-4">
+                    <div className="space-y-4">
                     {items.map((item, index) => (
                         <div
                             key={index}
@@ -57,6 +59,7 @@ export function ServiceFAQ({ items }: ServiceFAQProps) {
                             </AnimatePresence>
                         </div>
                     ))}
+                    </div>
                 </div>
             </div>
         </section>

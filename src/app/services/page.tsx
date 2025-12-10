@@ -20,6 +20,7 @@ export default function ServicesPage() {
             <ServicesOverview />
             
             <ServiceFAQ
+                className="bg-gray-50"
                 items={[
                     { 
                         question: "Can I rent for a short term?", 

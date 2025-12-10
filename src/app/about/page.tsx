@@ -17,9 +17,9 @@ export default function AboutPage() {
             />
 
             {/* Company Story */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
                         <div className="lg:w-1/2">
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-6">
                                 More Than Just an Office
@@ -65,8 +65,8 @@ export default function AboutPage() {
             </section>
 
             {/* Awards Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
+            <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4">
                             Awards & Recognition
@@ -75,7 +75,7 @@ export default function AboutPage() {
                             Our commitment to excellence has been recognized by industry leaders and our valued clients.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
                         <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl shadow-sm border border-primary-200 text-center">
                             <div className="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
                                 <Award className="w-8 h-8" />
@@ -105,8 +105,8 @@ export default function AboutPage() {
             </section>
 
             {/* Core Values Section */}
-            <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto px-4 md:px-6">
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4">
                             Our Core Values
@@ -115,7 +115,7 @@ export default function AboutPage() {
                             The four pillars that guide everything we do and shape how we serve our clients.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
                         <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
                             <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
                                 <ShieldCheck className="w-8 h-8" />
@@ -157,9 +157,9 @@ export default function AboutPage() {
             </section>
 
             {/* Vision & Mission */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
                         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
                             <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-secondary-600">
                                 <Eye className="w-8 h-8" />

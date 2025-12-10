@@ -84,9 +84,9 @@ export default function PrimeTowerPage() {
             />
 
             {/* Key Differentiators Banner */}
-            <section className="py-12 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-4xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -120,9 +120,9 @@ export default function PrimeTowerPage() {
             </section>
 
             {/* Overview */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col lg:flex-row gap-16">
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
                         <div className="lg:w-2/3">
                             <h2 className="text-3xl font-heading font-bold text-primary-700 mb-6">Overview</h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -175,14 +175,15 @@ export default function PrimeTowerPage() {
 
             {/* Key Features */}
             <ServiceFeatures
+                className="bg-gray-50"
                 title="Key Features"
                 subtitle="Premium amenities and strategic location advantages"
                 features={keyFeatures}
             />
 
             {/* Business Setup Services */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4 md:px-6">
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-heading font-bold text-primary-700 mb-4">Business Setup Services</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -193,7 +194,7 @@ export default function PrimeTowerPage() {
                     {/* Process Flow */}
                     <div className="mb-12">
                         <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Process</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
                             {businessSetupSteps.map((step, index) => (
                                 <motion.div
                                     key={index}
@@ -224,7 +225,7 @@ export default function PrimeTowerPage() {
                     </div>
 
                     {/* Service Details */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
                         <div className="bg-white p-6 rounded-2xl border border-gray-100">
                             <div className="w-12 h-12 bg-secondary-50 rounded-xl flex items-center justify-center mb-4 text-secondary-600">
                                 <Building2 className="w-6 h-6" />
@@ -267,8 +268,8 @@ export default function PrimeTowerPage() {
             </section>
 
             {/* Gallery */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
+            <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-heading font-bold text-primary-700 mb-10 text-center">Gallery</h2>
                     <ImageGallery images={[
                         "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop",

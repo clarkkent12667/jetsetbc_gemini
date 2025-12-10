@@ -20,9 +20,10 @@ export default function ServicedOfficesPage() {
             />
 
             {/* Intro Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-                    <h2 className="text-3xl font-bold text-primary-700 mb-6">Welcome to Jetset Business Center</h2>
+            <section className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold text-primary-700 mb-6">Welcome to Jetset Business Center</h2>
                     <p className="text-lg text-gray-600 mb-8">
                         Your destination for premium office spaces in Dubai. Fully furnished, move-in-ready suites tailored for privacy and prestige. 
                         Strategically located on the 20th floor of Prime Tower, in the bustling heart of Business Bay, we offer an elegant and modern workspace designed to elevate your business.
@@ -35,10 +36,12 @@ export default function ServicedOfficesPage() {
                         All our offices are move-in ready, allowing you to settle in without delay. At Jetset Business Center, 
                         we are more than just a Dubai office space provider — we aim to be a partner in your success.
                     </p>
+                    </div>
                 </div>
             </section>
 
             <ServiceFeatures
+                className="bg-gray-50"
                 title="Premium Office Solutions"
                 subtitle="Focus on growing your business while we manage your office."
                 features={[
@@ -52,6 +55,7 @@ export default function ServicedOfficesPage() {
             />
 
             <ServicePricing
+                className="bg-white"
                 title="Private Offices"
                 plans={[
                     {
@@ -74,6 +78,7 @@ export default function ServicedOfficesPage() {
             />
 
             <ServiceFAQ
+                className="bg-gray-50"
                 items={[
                     { 
                         question: "How much does it cost to rent an office space in Dubai Business Bay?", 

@@ -20,6 +20,7 @@ export default function MeetingRoomsPage() {
             />
 
             <ServiceFeatures
+                className="bg-white"
                 title="Designed for Productivity"
                 subtitle="Everything you need for successful presentations and collaborations."
                 features={[
@@ -33,6 +34,7 @@ export default function MeetingRoomsPage() {
             />
 
             <ServicePricing
+                className="bg-gray-50"
                 title="Room Rates"
                 plans={[
                     {
@@ -61,6 +63,7 @@ export default function MeetingRoomsPage() {
             />
 
             <ServiceFAQ
+                className="bg-white"
                 items={[
                     { 
                         question: "Can I customize the meeting room setup (boardroom, classroom, U-shape) to fit my event?", 

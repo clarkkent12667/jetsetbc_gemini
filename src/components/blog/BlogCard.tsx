@@ -30,7 +30,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
                 </div>
             </Link>
 
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                     <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />

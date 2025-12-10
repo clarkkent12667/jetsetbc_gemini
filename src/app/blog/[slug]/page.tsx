@@ -49,8 +49,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 height="h-[50vh]"
             />
 
-            <article className="py-16 md:py-24 bg-white">
-                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+            <article className="py-16 md:py-20 lg:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
                     <Link
                         href="/blog"
                         className="inline-flex items-center gap-2 text-gray-500 hover:text-primary-600 transition-colors mb-8"
@@ -92,6 +93,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                                 </div>
                             </>
                         )}
+                    </div>
                     </div>
                 </div>
             </article>

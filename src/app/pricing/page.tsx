@@ -17,6 +17,7 @@ export default function PricingPage() {
             />
 
             <ServicePricing
+                className="bg-white"
                 title="Coworking Spaces"
                 plans={[
                     {
@@ -44,9 +45,10 @@ export default function PricingPage() {
                 ]}
             />
 
-            <div className="bg-white h-px w-full" />
+            <div className="hidden" />
 
             <ServicePricing
+                className="bg-gray-50"
                 title="Serviced Offices"
                 plans={[
                     {
@@ -68,9 +70,10 @@ export default function PricingPage() {
                 ]}
             />
 
-            <div className="bg-white h-px w-full" />
+            <div className="hidden" />
 
             <ServicePricing
+                className="bg-white"
                 title="Virtual Ejari"
                 plans={[
                     {

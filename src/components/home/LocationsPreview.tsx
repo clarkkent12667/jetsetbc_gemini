@@ -15,8 +15,8 @@ const locations = [
 
 export function LocationsPreview() {
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container mx-auto px-4 md:px-6">
+        <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

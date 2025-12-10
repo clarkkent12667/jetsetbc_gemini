@@ -35,8 +35,8 @@ export function TestimonialCarousel() {
     }, [emblaApi]);
 
     return (
-        <section className="py-20 bg-white">
-            <div className="container mx-auto px-4 md:px-6">
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-4">
                         What Our Clients Say
