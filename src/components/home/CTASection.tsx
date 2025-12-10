@@ -14,9 +14,12 @@ export function CTASection() {
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
                     Ready to Find Your Perfect Workspace?
                 </h2>
-                <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
+                <p className="text-xl text-primary-100 mb-6 max-w-2xl mx-auto">
                     Join the Jetset community today and take your business to new heights.
                     Book a tour or contact us for a personalized quote.
+                </p>
+                <p className="text-lg text-primary-200 mb-10 max-w-2xl mx-auto">
+                    Tours available same-day. Contact us to schedule a viewing of the Burj Khalifa view offices.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -101,14 +101,20 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-secondary-500 shrink-0 mt-1" />
                                 <span className="text-primary-100">
-                                    Prime Tower, 20th Floor,<br />
-                                    Business Bay, Dubai, UAE
+                                    Prime Tower & Regal Tower,<br />
+                                    Business Bay, Dubai
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-secondary-500 shrink-0" />
                                 <a href="tel:+971585779312" className="text-primary-100 hover:text-white transition-colors">
-                                    +971 585 779 312
+                                    +971 58 577 9312
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Phone className="w-5 h-5 text-secondary-500 shrink-0" />
+                                <a href="tel:+97146657555" className="text-primary-100 hover:text-white transition-colors">
+                                    04 665 7555
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">

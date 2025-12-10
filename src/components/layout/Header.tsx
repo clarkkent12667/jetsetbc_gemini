@@ -30,6 +30,7 @@ const navigation = [
         ],
     },
     { name: "Pricing", href: "/pricing" },
+    { name: "FAQs", href: "/faqs" },
     { name: "Contact", href: "/contact" },
 ];
 

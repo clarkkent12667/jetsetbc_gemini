@@ -15,7 +15,7 @@ export default function CoworkingPage() {
         <>
             <PageHero
                 title="Best Co-Working Space in Dubai"
-                subtitle="Join a vibrant community of professionals in the heart of Dubai."
+                subtitle="The Community"
                 image="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop"
             />
 
@@ -24,11 +24,11 @@ export default function CoworkingPage() {
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <h2 className="text-3xl font-bold text-primary-700 mb-6">Innovation and Collaboration</h2>
                     <p className="text-lg text-gray-600 mb-8">
-                        Jetset Business Center brings you co-working spaces designed to facilitate innovation and collaboration. 
+                        Jetset Business Center brings you flexible desks in a high-end collaborative environment designed to facilitate innovation and collaboration. 
                         Perfectly positioned in the heart of Business Bay, Dubai, our co-working environment is more than just a workplace.
                     </p>
                     <p className="text-lg text-gray-600 mb-8">
-                        We offer a variety of flexible workspace options to suit your needs, from dedicated desks to hot desking options. 
+                        We offer a variety of flexible workspace options to suit your needs, from hot desking to dedicated desks and private cabins. 
                         Our shared office space in Dubai provides a dynamic and productive environment, with high-speed internet and premium amenities.
                     </p>
                     <p className="text-lg text-gray-600 mb-8">
@@ -58,18 +58,18 @@ export default function CoworkingPage() {
             <ServicePricing
                 plans={[
                     {
-                        name: "Day Pass",
+                        name: "Daily Rate",
                         price: "AED 80",
                         period: "/day",
                         description: "Perfect for occasional use.",
-                        features: ["Access from 9AM to 6PM", "High-speed Wi-Fi", "Complimentary coffee/tea", "Lounge access"],
+                        features: ["Access from 9AM to 6PM", "High-speed Wi-Fi", "Complimentary coffee/tea", "Lounge access", "Hot Desk access (first-come basis)"],
                     },
                     {
                         name: "Monthly Membership",
                         price: "AED 1,800",
                         period: "/month",
                         description: "For freelancers and remote workers.",
-                        features: ["24/7 Access", "Dedicated locker", "Meeting room credits", "Business address", "Printing credits"],
+                        features: ["24/7 Access", "Hot Desks (first-come basis) or Dedicated Desks (reserved)", "Dedicated locker", "Meeting room credits", "Business address", "Printing credits"],
                         popular: true,
                     },
                     {
@@ -77,7 +77,7 @@ export default function CoworkingPage() {
                         price: "AED 18,000",
                         period: "/year",
                         description: "Best value for long-term commitment.",
-                        features: ["All Monthly benefits", "2 months free", "Priority support", "Guest passes", "Event access"],
+                        features: ["All Monthly benefits", "Hot Desks (first-come basis) or Dedicated Desks (reserved)", "2 months free", "Priority support", "Guest passes", "Event access"],
                     },
                 ]}
             />
@@ -90,7 +90,7 @@ export default function CoworkingPage() {
                     },
                     { 
                         question: "Can I choose between hot desk and dedicated desk options at Jetset?", 
-                        answer: "Yes, we offer hot desk and fixed desk options to suit your preference." 
+                        answer: "Yes, we offer both Hot Desks (first-come basis) and Dedicated Desks (reserved) options to suit your preference." 
                     },
                     { 
                         question: "Is it possible to rent a coworking desk on a daily, weekly, or monthly basis?", 

@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { OperationalExcellence } from "@/components/home/OperationalExcellence";
 import { LocationsPreview } from "@/components/home/LocationsPreview";
 import { StatsSection } from "@/components/home/StatsSection";
 import { TestimonialCarousel } from "@/components/home/TestimonialCarousel";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <ServicesOverview />
       <WhyChooseUs />
+      <OperationalExcellence />
       <LocationsPreview />
       <StatsSection />
       <TestimonialCarousel />

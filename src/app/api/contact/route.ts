@@ -21,7 +21,7 @@ export async function POST(request: Request) {
         // Send email
         await transporter.sendMail({
             from: process.env.SMTP_FROM || 'noreply@jetsetbc.com',
-            to: 'info@jetsetbc.com', // Replace with actual recipient
+            to: 'contact@jetsetbc.com', // Replace with actual recipient
             subject: `New Contact Form Submission from ${body.name}`,
             html: `
         <h2>New Contact Form Submission</h2>

@@ -63,21 +63,14 @@ export default function VirtualEjariPage() {
             />
 
             <ServicePricing
-                title="Virtual Office Packages"
+                title="Virtual Ejari"
                 plans={[
                     {
-                        name: "Basic Virtual Office",
-                        price: "AED 6,000",
-                        period: "/year",
-                        description: "Essential for license renewal.",
-                        features: ["Business Address", "Ejari Contract", "Mail Handling", "Reception Services"],
-                    },
-                    {
-                        name: "Premium Virtual Office",
-                        price: "AED 9,000",
-                        period: "/year",
-                        description: "Complete business presence.",
-                        features: ["All Basic features", "Dedicated Phone Number", "Call Answering", "5 hours Meeting Room/month", "Lounge Access"],
+                        name: "Virtual Ejari",
+                        price: "AED 8,500",
+                        period: "/annum",
+                        description: "Complete virtual office solution.",
+                        features: ["Registered tenancy contract", "Unlimited inspections", "Same-day processing", "Business address", "Mail handling"],
                         popular: true,
                     },
                 ]}
@@ -103,7 +96,7 @@ export default function VirtualEjariPage() {
                     },
                     { 
                         question: "How long does it take to complete Ejari registration through Jetset?", 
-                        answer: "Jetset Business Center typically processes Virtual Ejari registrations in 1 business day, assuming all required documents are complete and accurate." 
+                        answer: "Jetset Business Center offers same-day processing for Virtual Ejari registrations, assuming all required documents are complete and accurate." 
                     },
                     { 
                         question: "Is Virtual Ejari accepted by government authorities and banks in Dubai?", 

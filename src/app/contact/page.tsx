@@ -37,7 +37,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Locate Us</h4>
-                                        <p className="text-gray-600">Prime Tower, 20th Floor,<br />Business Bay, Dubai, UAE</p>
+                                        <p className="text-gray-600">Prime Tower & Regal Tower,<br />Business Bay, Dubai</p>
                                     </div>
                                 </div>
 
@@ -46,8 +46,18 @@ export default function ContactPage() {
                                         <Phone className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">Phone</h4>
-                                        <a href="tel:+971585779312" className="text-gray-600 hover:text-primary-600 transition-colors">+971 585 779 312</a>
+                                        <h4 className="font-bold text-gray-900 mb-1">Phone/WhatsApp</h4>
+                                        <a href="tel:+971585779312" className="text-gray-600 hover:text-primary-600 transition-colors">+971 58 577 9312</a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-secondary-500 shadow-sm shrink-0">
+                                        <Phone className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 mb-1">Landline</h4>
+                                        <a href="tel:+97146657555" className="text-gray-600 hover:text-primary-600 transition-colors">04 665 7555</a>
                                     </div>
                                 </div>
 
@@ -72,6 +82,12 @@ export default function ContactPage() {
                                         <p className="text-gray-600">Sun: Closed</p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="mt-8 p-4 bg-primary-50 rounded-lg border border-primary-200">
+                                <p className="text-sm text-primary-800">
+                                    <strong>Tours available same-day.</strong> Contact us to schedule a viewing of the Burj Khalifa view offices.
+                                </p>
                             </div>
                         </div>
 

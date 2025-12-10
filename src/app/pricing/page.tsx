@@ -20,18 +20,18 @@ export default function PricingPage() {
                 title="Coworking Spaces"
                 plans={[
                     {
-                        name: "Day Pass",
+                        name: "Daily Rate",
                         price: "AED 80",
                         period: "/day",
                         description: "Perfect for occasional use.",
-                        features: ["Access from 9AM to 6PM", "High-speed Wi-Fi", "Complimentary coffee/tea", "Lounge access"],
+                        features: ["Access from 9AM to 6PM", "High-speed Wi-Fi", "Complimentary coffee/tea", "Lounge access", "Hot Desk access (first-come basis)"],
                     },
                     {
                         name: "Monthly Membership",
                         price: "AED 1,800",
                         period: "/month",
                         description: "For freelancers and remote workers.",
-                        features: ["24/7 Access", "Dedicated locker", "Meeting room credits", "Business address", "Printing credits"],
+                        features: ["24/7 Access", "Hot Desks (first-come basis) or Dedicated Desks (reserved)", "Private Cabins available", "Dedicated locker", "Meeting room credits", "Business address", "Printing credits"],
                         popular: true,
                     },
                     {
@@ -39,7 +39,7 @@ export default function PricingPage() {
                         price: "AED 18,000",
                         period: "/year",
                         description: "Best value for long-term commitment.",
-                        features: ["All Monthly benefits", "2 months free", "Priority support", "Guest passes", "Event access"],
+                        features: ["All Monthly benefits", "Hot Desks (first-come basis) or Dedicated Desks (reserved)", "Private Cabins available", "2 months free", "Priority support", "Guest passes", "Event access"],
                     },
                 ]}
             />
@@ -50,26 +50,20 @@ export default function PricingPage() {
                 title="Serviced Offices"
                 plans={[
                     {
-                        name: "Small Office",
-                        price: "AED 2,500",
-                        period: "/month",
-                        description: "Ideal for 1-2 people.",
-                        features: ["Fully furnished", "Ejari included", "High-speed internet", "Utility bills included", "Cleaning services"],
+                        name: "Inner Offices",
+                        price: "AED 50,000",
+                        period: "/annum",
+                        description: "Designed for focus and cost-efficiency.",
+                        features: ["Utilities included", "24/7 access", "Front desk support", "Cleaning services", "Minimum lease: 3 months"],
+                        popular: false,
                     },
                     {
-                        name: "Medium Office",
-                        price: "AED 5,000",
-                        period: "/month",
-                        description: "Perfect for teams of 3-5.",
-                        features: ["All Small Office features", "Meeting room credits", "Dedicated parking spot", "Logo on entrance", "Priority support"],
+                        name: "Outer Offices",
+                        price: "AED 50,000",
+                        period: "/annum",
+                        description: "Premium suites with floor-to-ceiling windows and iconic city views.",
+                        features: ["Utilities included", "24/7 access", "Front desk support", "Cleaning services", "Minimum lease: 3 months", "Floor-to-ceiling windows", "Iconic city views"],
                         popular: true,
-                    },
-                    {
-                        name: "Large Office",
-                        price: "AED 10,000+",
-                        period: "/month",
-                        description: "For larger teams of 6+.",
-                        features: ["Custom layout options", "Multiple parking spots", "Executive furniture", "Private server rack", "Dedicated account manager"],
                     },
                 ]}
             />
@@ -77,21 +71,14 @@ export default function PricingPage() {
             <div className="bg-white h-px w-full" />
 
             <ServicePricing
-                title="Virtual Office"
+                title="Virtual Ejari"
                 plans={[
                     {
-                        name: "Basic Virtual Office",
-                        price: "AED 6,000",
-                        period: "/year",
-                        description: "Essential for license renewal.",
-                        features: ["Business Address", "Ejari Contract", "Mail Handling", "Reception Services"],
-                    },
-                    {
-                        name: "Premium Virtual Office",
-                        price: "AED 9,000",
-                        period: "/year",
-                        description: "Complete business presence.",
-                        features: ["All Basic features", "Dedicated Phone Number", "Call Answering", "5 hours Meeting Room/month", "Lounge Access"],
+                        name: "Virtual Ejari",
+                        price: "AED 8,500",
+                        period: "/annum",
+                        description: "Complete virtual office solution.",
+                        features: ["Registered tenancy contract", "Unlimited inspections", "Same-day processing", "Business address", "Mail handling"],
                         popular: true,
                     },
                 ]}

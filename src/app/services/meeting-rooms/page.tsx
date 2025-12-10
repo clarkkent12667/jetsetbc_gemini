@@ -27,7 +27,7 @@ export default function MeetingRoomsPage() {
                     { title: "Video Conferencing", description: "Support for hybrid meetings with in-person and virtual attendees.", icon: <Video className="w-6 h-6" /> },
                     { title: "Audio Systems", description: "Premium audio for clear communication.", icon: <Mic className="w-6 h-6" /> },
                     { title: "Secure Wi-Fi", description: "Dedicated bandwidth for confidential business discussions.", icon: <Wifi className="w-6 h-6" /> },
-                    { title: "Breakout Areas", description: "Access to reception lounge for networking and informal meetings.", icon: <Coffee className="w-6 h-6" /> },
+                    { title: "Member Benefit", description: "2 hours of complimentary access per day for members.", icon: <Calendar className="w-6 h-6" /> },
                     { title: "Easy Booking", description: "Last-minute bookings welcome, subject to availability.", icon: <Calendar className="w-6 h-6" /> },
                 ]}
             />
@@ -36,25 +36,25 @@ export default function MeetingRoomsPage() {
                 title="Room Rates"
                 plans={[
                     {
-                        name: "Standard Meeting Room",
+                        name: "Standard Room",
                         price: "AED 100",
                         period: "/hour",
-                        description: "Capacity: 6 people",
+                        description: "Capacity: 6 Person",
                         features: ["Whiteboard", "TV Screen", "Wi-Fi", "Water & Coffee"],
                     },
                     {
                         name: "Conference Room",
                         price: "AED 150",
                         period: "/hour",
-                        description: "Capacity: 8 people",
+                        description: "Capacity: 8 Person (Boardroom)",
                         features: ["Projector", "Video Conferencing", "Premium Seating", "Dedicated Support"],
                         popular: true,
                     },
                     {
-                        name: "Majlis",
+                        name: "Majilis",
                         price: "AED 250",
                         period: "/hour",
-                        description: "Capacity: 9-10 people",
+                        description: "Capacity: 9-10 Person (VIP/Executive style)",
                         features: ["Traditional Style", "Premium Amenities", "Video Conferencing", "VIP Experience"],
                     },
                 ]}
@@ -80,7 +80,7 @@ export default function MeetingRoomsPage() {
                     },
                     { 
                         question: "How many people can your meeting and conference rooms accommodate?", 
-                        answer: "We have three meeting rooms to offer: Majlis (9-10 people), Conference (8 people), and Standard (6 people)." 
+                        answer: "We have three meeting rooms to offer: Majilis (9-10 person capacity, VIP/Executive style), Conference Room (8 person capacity, Boardroom), and Standard Room (6 person capacity). Members also receive 2 hours of complimentary access per day." 
                     },
                     { 
                         question: "Is catering or coffee service available inside the meeting room?", 

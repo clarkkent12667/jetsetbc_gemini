@@ -15,7 +15,7 @@ export default function ServicedOfficesPage() {
         <>
             <PageHero
                 title="Office Work Space in Dubai"
-                subtitle="Fully furnished, ready-to-move-in offices tailored to your business needs."
+                subtitle="The Headquarters"
                 image="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
             />
 
@@ -24,8 +24,8 @@ export default function ServicedOfficesPage() {
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
                     <h2 className="text-3xl font-bold text-primary-700 mb-6">Welcome to Jetset Business Center</h2>
                     <p className="text-lg text-gray-600 mb-8">
-                        Your destination for premium office spaces in Dubai. Strategically located on the 20th floor of Prime Tower, 
-                        in the bustling heart of Business Bay, we offer an elegant and modern workspace designed to elevate your business.
+                        Your destination for premium office spaces in Dubai. Fully furnished, move-in-ready suites tailored for privacy and prestige. 
+                        Strategically located on the 20th floor of Prime Tower, in the bustling heart of Business Bay, we offer an elegant and modern workspace designed to elevate your business.
                     </p>
                     <p className="text-lg text-gray-600 mb-8">
                         With Jetset Business Center, you get to enjoy the flexibility of choosing between short and long-term rentals. 
@@ -52,29 +52,23 @@ export default function ServicedOfficesPage() {
             />
 
             <ServicePricing
-                title="Office Rental Packages"
+                title="Private Offices"
                 plans={[
                     {
-                        name: "Small Office",
-                        price: "AED 2,500",
-                        period: "/month",
-                        description: "Ideal for 1-2 people.",
-                        features: ["Fully furnished", "Ejari included", "High-speed internet", "Utility bills included", "Cleaning services"],
+                        name: "Inner Offices",
+                        price: "AED 50,000",
+                        period: "/annum",
+                        description: "Designed for focus and cost-efficiency.",
+                        features: ["Utilities included", "24/7 access", "Front desk support", "Cleaning services", "Minimum lease: 3 months"],
+                        popular: false,
                     },
                     {
-                        name: "Medium Office",
-                        price: "AED 5,000",
-                        period: "/month",
-                        description: "Perfect for teams of 3-5.",
-                        features: ["All Small Office features", "Meeting room credits", "Dedicated parking spot", "Logo on entrance", "Priority support"],
+                        name: "Outer Offices",
+                        price: "AED 50,000",
+                        period: "/annum",
+                        description: "Premium suites with floor-to-ceiling windows and iconic city views.",
+                        features: ["Utilities included", "24/7 access", "Front desk support", "Cleaning services", "Minimum lease: 3 months", "Floor-to-ceiling windows", "Iconic city views"],
                         popular: true,
-                    },
-                    {
-                        name: "Large Office",
-                        price: "AED 10,000+",
-                        period: "/month",
-                        description: "For larger teams of 6+.",
-                        features: ["Custom layout options", "Multiple parking spots", "Executive furniture", "Private server rack", "Dedicated account manager"],
                     },
                 ]}
             />
@@ -83,7 +77,7 @@ export default function ServicedOfficesPage() {
                 items={[
                     { 
                         question: "How much does it cost to rent an office space in Dubai Business Bay?", 
-                        answer: "Starts at AED 50,000 for premium offices including utilities." 
+                        answer: "Private offices start at AED 50,000 per annum, with a minimum lease of 3 months. This includes utilities, 24/7 access, front desk support, and cleaning services." 
                     },
                     { 
                         question: "What types of office spaces are available at Jetset Business Center?", 
@@ -107,7 +101,7 @@ export default function ServicedOfficesPage() {
                     },
                     { 
                         question: "Can I rent an office in Dubai on a short-term basis?", 
-                        answer: "Yes, we are open to offer minimum 3-month rental duration." 
+                        answer: "Yes, we offer flexible lease terms with a minimum rental duration of 3 months." 
                     },
                     { 
                         question: "Do you provide business support services along with office rentals?", 
@@ -118,8 +112,8 @@ export default function ServicedOfficesPage() {
                         answer: "Yes, near metro and public parking is available." 
                     },
                     { 
-                        question: "How do I book a tour of Jetset Business Center’s office spaces in Dubai?", 
-                        answer: "Visit our website or contact us via WhatsApp or call at +971 585 779 312." 
+                        question: "How do I book a tour of Jetset Business Center's office spaces in Dubai?", 
+                        answer: "Visit our website or contact us via WhatsApp or call at +971 58 577 9312. Tours available same-day. Contact us to schedule a viewing of the Burj Khalifa view offices." 
                     }
                 ]}
             />
