@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/shared/PageHero";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
 import { ServiceFAQ } from "@/components/services/ServiceFAQ";
+import { ServicePricing } from "@/components/services/ServicePricing";
 import { CTASection } from "@/components/home/CTASection";
 import { FileCheck, Globe, Building, Users, CreditCard, Award } from "lucide-react";
 import Link from "next/link";
@@ -34,56 +35,31 @@ export default function BusinessSetupPage() {
             />
 
             {/* Custom Pricing/Consultation Section */}
-            <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-heading font-bold text-primary-700 mb-6">Tailored Packages</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-                        Every business is unique. We offer customized setup packages based on your specific activity,
-                        jurisdiction, and requirements.
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto mb-12">
-                        <div className="bg-white p-8 rounded-2xl shadow-md">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Freezone Company</h3>
-                            <p className="text-gray-500 mb-4">Starting from</p>
-                            <p className="text-3xl font-bold text-primary-600 mb-6">AED 5,000</p>
-                            <ul className="text-left space-y-2 mb-8 text-sm text-gray-600">
-                                <li>• 100% Foreign Ownership</li>
-                                <li>• No local partner needed</li>
-                                <li>• Ideal for international trade</li>
-                            </ul>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-md border-2 border-secondary-500 relative">
-                            <div className="absolute top-0 right-0 bg-secondary-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Mainland Company</h3>
-                            <p className="text-gray-500 mb-4">Starting from</p>
-                            <p className="text-3xl font-bold text-primary-600 mb-6">AED 15,000</p>
-                            <ul className="text-left space-y-2 mb-8 text-sm text-gray-600">
-                                <li>• Trade anywhere in UAE</li>
-                                <li>• 100% Ownership (for most activities)</li>
-                                <li>• Government contracts eligibility</li>
-                            </ul>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-md">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Visa & Support</h3>
-                            <p className="text-gray-500 mb-4">Starting from</p>
-                            <p className="text-3xl font-bold text-primary-600 mb-6">AED 3,500</p>
-                            <ul className="text-left space-y-2 mb-8 text-sm text-gray-600">
-                                <li>• Visa processing</li>
-                                <li>• Corporate bank account opening</li>
-                                <li>• Ongoing PRO support</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <Link
-                        href="/contact"
-                        className="inline-block px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold text-lg transition-colors"
-                    >
-                        Get a Free Consultation
-                    </Link>
-                </div>
-            </section>
+            <ServicePricing
+                className="bg-gray-50"
+                title="Tailored Packages"
+                plans={[
+                    {
+                        name: "Freezone Company",
+                        price: "AED 5,000",
+                        description: "Starting from",
+                        features: ["100% Foreign Ownership", "No local partner needed", "Ideal for international trade"],
+                    },
+                    {
+                        name: "Mainland Company",
+                        price: "AED 15,000",
+                        description: "Starting from",
+                        features: ["Trade anywhere in UAE", "100% Ownership (for most activities)", "Government contracts eligibility"],
+                        popular: true,
+                    },
+                    {
+                        name: "Visa & Support",
+                        price: "AED 3,500",
+                        description: "Starting from",
+                        features: ["Visa processing", "Corporate bank account opening", "Ongoing PRO support"],
+                    },
+                ]}
+            />
 
             <ServiceFAQ
                 className="bg-white"

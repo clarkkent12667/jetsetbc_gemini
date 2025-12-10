@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/shared/PageHero";
 import { CTASection } from "@/components/home/CTASection";
+import { FeatureCard } from "@/components/shared/FeatureCard";
 import { Target, Eye, Award, ShieldCheck, Sparkles, Heart, Handshake } from "lucide-react";
 
 export const metadata = {
@@ -76,30 +77,24 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
-                        <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl shadow-sm border border-primary-200 text-center">
-                            <div className="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                                <Award className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-primary-700 mb-2">Best Business Center</h3>
-                            <p className="text-primary-600 font-semibold mb-1">Letswork, 2024</p>
-                            <p className="text-gray-600 text-sm">Winner of the Year</p>
-                        </div>
-                        <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl shadow-sm border border-primary-200 text-center">
-                            <div className="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                                <Award className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-primary-700 mb-2">Best Newcomer</h3>
-                            <p className="text-primary-600 font-semibold mb-1">Letswork, 2023</p>
-                            <p className="text-gray-600 text-sm">Winner of the Year</p>
-                        </div>
-                        <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl shadow-sm border border-primary-200 text-center">
-                            <div className="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                                <Award className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-primary-700 mb-2">Client Satisfaction</h3>
-                            <p className="text-primary-600 font-semibold mb-1">4.9/5 Star Rating</p>
-                            <p className="text-gray-600 text-sm">162+ Google Reviews</p>
-                        </div>
+                        <FeatureCard
+                            icon={<Award className="w-7 h-7" />}
+                            title="Best Business Center"
+                            description="Winner of the Year"
+                            badge="Letswork, 2024"
+                        />
+                        <FeatureCard
+                            icon={<Award className="w-7 h-7" />}
+                            title="Best Newcomer"
+                            description="Winner of the Year"
+                            badge="Letswork, 2023"
+                        />
+                        <FeatureCard
+                            icon={<Award className="w-7 h-7" />}
+                            title="Client Satisfaction"
+                            description="162+ Google Reviews"
+                            badge="4.9/5 Star Rating"
+                        />
                     </div>
                 </div>
             </section>
@@ -116,42 +111,26 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
-                            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
-                                <ShieldCheck className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-primary-700 mb-4">Transparency</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Clear pricing with no hidden operational costs. We believe in honest, upfront communication so you can make informed decisions about your workspace needs.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
-                            <div className="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
-                                <Sparkles className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-primary-700 mb-4">Innovation</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Continuously adapting to hybrid and remote work trends. We stay ahead of the curve to provide cutting-edge solutions that meet the evolving needs of modern businesses.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
-                            <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-primary-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
-                                <Heart className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-primary-700 mb-4">Customer Obsession</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Treating every client—startup or enterprise—with equal respect. Your success is our success, and we're committed to delivering exceptional service regardless of your company size.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
-                            <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
-                                <Handshake className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-primary-700 mb-4">Relationship-Driven</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                We prioritize long-term partnerships over transactional tenancy. Building trust and fostering meaningful connections is at the heart of how we operate.
-                            </p>
-                        </div>
+                        <FeatureCard
+                            icon={<ShieldCheck className="w-7 h-7" />}
+                            title="Transparency"
+                            description="Clear pricing with no hidden operational costs. We believe in honest, upfront communication so you can make informed decisions about your workspace needs."
+                        />
+                        <FeatureCard
+                            icon={<Sparkles className="w-7 h-7" />}
+                            title="Innovation"
+                            description="Continuously adapting to hybrid and remote work trends. We stay ahead of the curve to provide cutting-edge solutions that meet the evolving needs of modern businesses."
+                        />
+                        <FeatureCard
+                            icon={<Heart className="w-7 h-7" />}
+                            title="Customer Obsession"
+                            description="Treating every client—startup or enterprise—with equal respect. Your success is our success, and we're committed to delivering exceptional service regardless of your company size."
+                        />
+                        <FeatureCard
+                            icon={<Handshake className="w-7 h-7" />}
+                            title="Relationship-Driven"
+                            description="We prioritize long-term partnerships over transactional tenancy. Building trust and fostering meaningful connections is at the heart of how we operate."
+                        />
                     </div>
                 </div>
             </section>
@@ -160,34 +139,21 @@ export default function AboutPage() {
             <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                            <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-secondary-600">
-                                <Eye className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                            <p className="text-gray-600">
-                                To redefine the business center concept in the UAE and GCC by combining luxury, convenience, and community. We envision a future where workspaces are hybrid-friendly, hospitality-driven, and technologically seamless.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                            <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-secondary-600">
-                                <Target className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                            <p className="text-gray-600">
-                                To provide customized solutions for our clients' office and corporate setup requirements. We aim to remove the administrative burden of running an office so business owners can focus purely on revenue and growth.
-                            </p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                            <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6 text-secondary-600">
-                                <Award className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Our Values</h3>
-                            <p className="text-gray-600">
-                                Excellence, Integrity, Innovation, and Community. We believe in building
-                                lasting relationships based on trust and mutual success.
-                            </p>
-                        </div>
+                        <FeatureCard
+                            icon={<Eye className="w-7 h-7" />}
+                            title="Our Vision"
+                            description="To redefine the business center concept in the UAE and GCC by combining luxury, convenience, and community. We envision a future where workspaces are hybrid-friendly, hospitality-driven, and technologically seamless."
+                        />
+                        <FeatureCard
+                            icon={<Target className="w-7 h-7" />}
+                            title="Our Mission"
+                            description="To provide customized solutions for our clients' office and corporate setup requirements. We aim to remove the administrative burden of running an office so business owners can focus purely on revenue and growth."
+                        />
+                        <FeatureCard
+                            icon={<Award className="w-7 h-7" />}
+                            title="Our Values"
+                            description="Excellence, Integrity, Innovation, and Community. We believe in building lasting relationships based on trust and mutual success."
+                        />
                     </div>
                 </div>
             </section>

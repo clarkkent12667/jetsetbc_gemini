@@ -3,36 +3,38 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Wifi, Coffee, ShieldCheck, Users } from "lucide-react";
 
+import { FeatureCard } from "@/components/shared/FeatureCard";
+
 const benefits = [
     {
         title: "Prime Locations",
         description: "Prestigious addresses in Business Bay, near Burj Khalifa and Dubai Mall.",
-        icon: MapPin,
+        icon: <MapPin className="w-7 h-7" />,
     },
     {
         title: "24/7 Access",
         description: "Work on your schedule with round-the-clock secure access to your office.",
-        icon: Clock,
+        icon: <Clock className="w-7 h-7" />,
     },
     {
         title: "High-Speed Internet",
         description: "Enterprise-grade connectivity ensuring you stay productive and connected.",
-        icon: Wifi,
+        icon: <Wifi className="w-7 h-7" />,
     },
     {
         title: "Premium Amenities",
         description: "Complimentary coffee, tea, and access to modern lounge areas.",
-        icon: Coffee,
+        icon: <Coffee className="w-7 h-7" />,
     },
     {
         title: "Business Support",
         description: "Dedicated reception, mail handling, and IT support services.",
-        icon: ShieldCheck,
+        icon: <ShieldCheck className="w-7 h-7" />,
     },
     {
         title: "Vibrant Community",
         description: "Network with like-minded professionals and grow your business.",
-        icon: Users,
+        icon: <Users className="w-7 h-7" />,
     },
 ];
 
@@ -40,68 +42,45 @@ export function WhyChooseUs() {
     return (
         <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-                    <div className="lg:w-1/2">
-                        <motion.h2
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-6"
-                        >
-                            Why Choose Jetset Business Center?
-                        </motion.h2>
-                        <motion.p
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="text-gray-600 text-lg mb-8 leading-relaxed"
-                        >
-                            We provide more than just an office space. We offer a comprehensive ecosystem
-                            designed to help your business thrive in Dubai's competitive market.
-                        </motion.p>
+                <div className="text-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-4xl font-heading font-bold text-primary-700 mb-6"
+                    >
+                        Why Choose Jetset Business Center?
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+                    >
+                        We provide more than just an office space. We offer a comprehensive ecosystem
+                        designed to help your business thrive in Dubai's competitive market.
+                    </motion.p>
+                </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                            {benefits.map((benefit, index) => (
-                                <motion.div
-                                    key={benefit.title}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2 + index * 0.1 }}
-                                    className="flex gap-4"
-                                >
-                                    <div className="shrink-0">
-                                        <div className="w-10 h-10 rounded-full bg-secondary-100 flex items-center justify-center text-secondary-600">
-                                            <benefit.icon className="w-5 h-5" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">{benefit.title}</h4>
-                                        <p className="text-sm text-gray-600">{benefit.description}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="lg:w-1/2 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+                    {benefits.map((benefit, index) => (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            key={benefit.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="relative z-10 rounded-2xl overflow-hidden shadow-2xl"
+                            transition={{ delay: 0.2 + index * 0.1 }}
+                            className="h-full"
                         >
-                            <img
-                                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
-                                alt="Modern Office Space"
-                                className="w-full h-auto"
+                            <FeatureCard
+                                icon={benefit.icon}
+                                title={benefit.title}
+                                description={benefit.description}
+                                className="bg-white"
                             />
                         </motion.div>
-                        {/* Decorative elements */}
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary-500/10 rounded-full blur-3xl -z-10" />
-                        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary-500/10 rounded-full blur-3xl -z-10" />
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

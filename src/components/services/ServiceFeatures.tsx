@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideIcon } from "lucide-react";
+import { FeatureCard } from "@/components/shared/FeatureCard";
 import { motion } from "framer-motion";
 
 interface Feature {
@@ -33,13 +33,14 @@ export function ServiceFeatures({ title, subtitle, features, className }: Servic
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow"
+                            className="h-full"
                         >
-                            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm text-secondary-500">
-                                {feature.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                            <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                            <FeatureCard
+                                icon={feature.icon}
+                                title={feature.title}
+                                description={feature.description}
+                                className="h-full"
+                            />
                         </motion.div>
                     ))}
                 </div>

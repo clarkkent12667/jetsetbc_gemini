@@ -71,8 +71,8 @@ export function TestimonialCarousel() {
                     <div className="overflow-hidden w-full" ref={emblaRef}>
                         <div className="flex">
                             {testimonials.map((testimonial, index) => (
-                                <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
-                                    <div className="bg-gray-50 p-8 md:p-12 rounded-2xl text-center relative border border-gray-100">
+                                <div key={index} className="flex-[0_0_100%] min-w-0 px-4 py-4">
+                                    <div className="bg-white p-8 md:p-12 rounded-2xl text-center relative border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
                                         <Quote className="w-12 h-12 text-secondary-200 absolute top-8 left-8 opacity-50" />
                                         
                                         <div className="flex items-center justify-center gap-2 mb-6">

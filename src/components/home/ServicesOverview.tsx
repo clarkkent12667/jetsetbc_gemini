@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Briefcase, Users, Monitor, MapPin, Building2 } from "lucide-react";
 
+import { FeatureCard } from "@/components/shared/FeatureCard";
+
 interface Service {
     title: string;
     subtitle?: string;
     description: string;
-    icon: React.ComponentType<{ className?: string }>;
+    icon: React.ReactNode;
     href: string;
 }
 
@@ -17,32 +19,32 @@ const services: Service[] = [
         title: "Coworking Spaces",
         subtitle: "The Community",
         description: "Flexible desks in a high-end collaborative environment.",
-        icon: Users,
+        icon: <Users className="w-7 h-7" />,
         href: "/services/coworking-space",
     },
     {
         title: "Serviced Offices",
         subtitle: "The Headquarters",
         description: "Fully furnished, move-in-ready suites tailored for privacy and prestige.",
-        icon: Building2,
+        icon: <Building2 className="w-7 h-7" />,
         href: "/services/serviced-offices",
     },
     {
         title: "Meeting Rooms",
         description: "Professional meeting spaces equipped with state-of-the-art technology.",
-        icon: Monitor,
+        icon: <Monitor className="w-7 h-7" />,
         href: "/services/meeting-rooms",
     },
     {
         title: "Virtual Office & Ejari",
         description: "Prestigious business address and Ejari services for compliance.",
-        icon: MapPin,
+        icon: <MapPin className="w-7 h-7" />,
         href: "/services/virtual-ejari",
     },
     {
         title: "Business Setup",
         description: "End-to-end support for licensing, visas, and company formation.",
-        icon: Briefcase,
+        icon: <Briefcase className="w-7 h-7" />,
         href: "/services/business-setup",
     },
 ];
@@ -82,22 +84,14 @@ export function ServicesOverview() {
                         >
                             <Link
                                 href={service.href}
-                                className="block group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary-500/30 h-full"
+                                className="block h-full"
                             >
-                                <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-500 transition-colors duration-300">
-                                    <service.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-colors duration-300" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                                    {service.title}
-                                </h3>
-                                {service.subtitle && (
-                                    <p className="text-sm font-semibold text-secondary-600 mb-2">
-                                        {service.subtitle}
-                                    </p>
-                                )}
-                                <p className="text-gray-600 leading-relaxed">
-                                    {service.description}
-                                </p>
+                                <FeatureCard
+                                    icon={service.icon}
+                                    title={service.title}
+                                    description={service.description}
+                                    badge={service.subtitle}
+                                />
                             </Link>
                         </motion.div>
                     ))}

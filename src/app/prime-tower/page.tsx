@@ -5,17 +5,18 @@ import { CTASection } from "@/components/home/CTASection";
 import { MapComponent } from "@/components/shared/GoogleMap";
 import { ImageGallery } from "@/components/shared/ImageGallery";
 import { ServiceFeatures } from "@/components/services/ServiceFeatures";
+import { FeatureCard } from "@/components/shared/FeatureCard";
 import { Wifi, Car, Clock, Printer, Coffee, ShieldCheck, MapPin, Building2, Eye, ArrowRight, FileCheck, Globe, Building, Users, CreditCard, Zap, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 const amenities = [
-    { icon: Wifi, label: "High-Speed Internet" },
-    { icon: Car, label: "Parking Available" },
-    { icon: Clock, label: "24/7 Access" },
-    { icon: Printer, label: "Printing Services" },
-    { icon: Coffee, label: "Pantry & Lounge" },
-    { icon: ShieldCheck, label: "Security & CCTV" },
+    { icon: <Wifi className="w-4 h-4" />, label: "High-Speed Internet" },
+    { icon: <Car className="w-4 h-4" />, label: "Parking Available" },
+    { icon: <Clock className="w-4 h-4" />, label: "24/7 Access" },
+    { icon: <Printer className="w-4 h-4" />, label: "Printing Services" },
+    { icon: <Coffee className="w-4 h-4" />, label: "Pantry & Lounge" },
+    { icon: <ShieldCheck className="w-4 h-4" />, label: "Security & CCTV" },
 ];
 
 const keyFeatures = [
@@ -161,7 +162,7 @@ export default function PrimeTowerPage() {
                                     {amenities.map((amenity, index) => (
                                         <li key={index} className="flex items-center gap-3 text-gray-700">
                                             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-secondary-500 shadow-sm">
-                                                <amenity.icon className="w-4 h-4" />
+                                                {amenity.icon}
                                             </div>
                                             <span>{amenity.label}</span>
                                         </li>
@@ -202,18 +203,15 @@ export default function PrimeTowerPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="relative"
+                                    className="relative h-full"
                                 >
-                                    <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow h-full">
-                                        <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 text-primary-600">
-                                            {step.icon}
-                                        </div>
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-sm font-bold text-primary-600">Step {index + 1}</span>
-                                        </div>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h4>
-                                        <p className="text-gray-600 text-sm">{step.description}</p>
-                                    </div>
+                                    <FeatureCard
+                                        icon={step.icon}
+                                        title={step.title}
+                                        description={step.description}
+                                        badge={`Step ${index + 1}`}
+                                        className="h-full"
+                                    />
                                     {index < businessSetupSteps.length - 1 && (
                                         <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
                                             <ArrowRight className="w-6 h-6 text-secondary-500" />
@@ -226,34 +224,30 @@ export default function PrimeTowerPage() {
 
                     {/* Service Details */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
-                        <div className="bg-white p-6 rounded-2xl border border-gray-100">
-                            <div className="w-12 h-12 bg-secondary-50 rounded-xl flex items-center justify-center mb-4 text-secondary-600">
-                                <Building2 className="w-6 h-6" />
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Mainland Licenses</h4>
-                            <p className="text-gray-600 text-sm">100% foreign ownership where applicable. Trade anywhere in UAE with government contract eligibility.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl border border-gray-100">
-                            <div className="w-12 h-12 bg-secondary-50 rounded-xl flex items-center justify-center mb-4 text-secondary-600">
-                                <Building className="w-6 h-6" />
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Free Zone Licenses</h4>
-                            <p className="text-gray-600 text-sm">100% foreign ownership, no local partner required. Ideal for international trade and specific activities.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl border border-gray-100">
-                            <div className="w-12 h-12 bg-secondary-50 rounded-xl flex items-center justify-center mb-4 text-secondary-600">
-                                <Globe className="w-6 h-6" />
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Visa Processing</h4>
-                            <p className="text-gray-600 text-sm">Complete visa processing support for investors and staff members, including family visas.</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-2xl border border-gray-100">
-                            <div className="w-12 h-12 bg-secondary-50 rounded-xl flex items-center justify-center mb-4 text-secondary-600">
-                                <CreditCard className="w-6 h-6" />
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Bank Account Opening</h4>
-                            <p className="text-gray-600 text-sm">Corporate bank account opening support with guidance through the entire process.</p>
-                        </div>
+                        <FeatureCard
+                            icon={<Building2 className="w-6 h-6" />}
+                            title="Mainland Licenses"
+                            description="100% foreign ownership where applicable. Trade anywhere in UAE with government contract eligibility."
+                            className="h-full"
+                        />
+                        <FeatureCard
+                            icon={<Building className="w-6 h-6" />}
+                            title="Free Zone Licenses"
+                            description="100% foreign ownership, no local partner required. Ideal for international trade and specific activities."
+                            className="h-full"
+                        />
+                        <FeatureCard
+                            icon={<Globe className="w-6 h-6" />}
+                            title="Visa Processing"
+                            description="Complete visa processing support for investors and staff members, including family visas."
+                            className="h-full"
+                        />
+                        <FeatureCard
+                            icon={<CreditCard className="w-6 h-6" />}
+                            title="Bank Account Opening"
+                            description="Corporate bank account opening support with guidance through the entire process."
+                            className="h-full"
+                        />
                     </div>
 
                     <div className="text-center mt-12">
